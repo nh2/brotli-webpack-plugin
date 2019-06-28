@@ -11,7 +11,7 @@ function BrotliPlugin(options) {
     this.minRatio = options.minRatio || 0.8;
     this.deleteOriginalAssets = options.deleteOriginalAssets || false;
 
-    var compress = require('./compress.js')();
+    var compress = require('./compress.js')(this);
 
     var brotliOptions = {
         mode: options.hasOwnProperty('mode') ? options.mode : 0,
